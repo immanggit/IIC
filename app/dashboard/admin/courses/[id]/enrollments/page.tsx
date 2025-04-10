@@ -7,10 +7,8 @@ import { ArrowLeft } from "lucide-react"
 import { Progress } from "@/components/ui/progress"
 import { Badge } from "@/components/ui/badge"
 import ExportEnrollmentsPDFButton from "@/components/admin/export-enrollments-pdf"
-import { useSearchParams } from "next/navigation";
 
 export default async function CourseEnrollmentsPage({ params }: { params: { id: string } }) {
-  const searchParams = useSearchParams();
   const supabase = createClient()
 
   // Get current user

@@ -1,3 +1,5 @@
+"use client"
+
 import { createClient } from "@/utils/supabase/server"
 import { notFound, redirect } from "next/navigation"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
