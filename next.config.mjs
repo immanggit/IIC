@@ -10,10 +10,13 @@ try {
     // ignore error
   }
 }
+const isProd = process.env.NODE_ENV === 'production';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",  // <=== enables static exports
+  basePath: isProd ? '/IIC' : '',
+  assetPrefix: isProd ? '/IIC/' : '',
   eslint: {
     ignoreDuringBuilds: true,
   },
